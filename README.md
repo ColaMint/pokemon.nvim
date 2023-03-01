@@ -8,15 +8,15 @@ Furthermore, you can use the `Pokedex` feature to access information about the c
 
 ### Pikachu (0025)
 
- <img src="./screenshot/0025.1.png" alt="Pikachu" width="600" height="512">
+ <img src="./screenshot/0025.1.png" alt="Pikachu" width="600">
 
 ### Mega Charizard Y (0006.3) 
 
- <img src="./screenshot/0006.3.png" alt="Mega Charizard Y" width="600" height="512">
+ <img src="./screenshot/0006.3.png" alt="Mega Charizard Y" width="600">
 
 ### Jigglypuff (0039)
 
- <img src="./screenshot/0039.1.png" alt="Jigglypuff" width="600" height="512">
+ <img src="./screenshot/0039.1.png" alt="Jigglypuff" width="600">
 
 ## Usage
 
