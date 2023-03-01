@@ -105,7 +105,7 @@ Furthermore, you can use the `Pokedex` feature to access information about the c
 
 ### `:PokemonTogglePokedex`
 
-Toggle the float window of pokedex.
+Toggle the floating window of `Pokedex`.
 
 recommended keymap:
 

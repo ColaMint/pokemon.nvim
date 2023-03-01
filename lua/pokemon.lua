@@ -61,7 +61,7 @@ function M.toggle_pokedex(opt)
         return
     end
 
-    -- does float window exist?
+    -- does the floating window still exist?
     if M.win_id and vim.api.nvim_win_is_valid(M.win_id) then
         vim.api.nvim_win_close(M.win_id, true)
     else
@@ -125,7 +125,7 @@ function M.toggle_pokedex(opt)
             end
         end
 
-        -- create float window
+        -- create a floating window
         local vim_width = vim.api.nvim_get_option("columns")
         local vim_height = vim.api.nvim_get_option("lines")
         local win_width = 48
