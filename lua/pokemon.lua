@@ -24,10 +24,13 @@ end
 function M.setup(opt)
     local size = opt.size
     if size == nil or size == "auto" then
-        if vim.fn.winheight(0) >= 50 then
+        local win_height = vim.fn.winheight(0)
+        if win_height >= 60 then
             size = "large"
-        else
+        elseif win_height >= 40 then
             size = "small"
+        else
+            size = "tiny"
         end
     end
     M.size = size

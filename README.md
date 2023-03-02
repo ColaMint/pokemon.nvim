@@ -96,7 +96,7 @@ Furthermore, you can use the `Pokedex` feature to access information about the c
     -- [number]: 0001 ~ 1008
     -- [forme]: 1, 2, 3, 4, ... (represents the different forme of this pokemon)
     number = 'random', -- '0001', '0006.1', '0006.2', '0006.3'
-    -- header size ('small', 'large'). default is 'auto'.
+    -- header size ('tiny', small', 'large'). default is 'auto'.
     size = 'auto', 
 }
 ```
