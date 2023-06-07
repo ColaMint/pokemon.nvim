@@ -39,8 +39,11 @@ function M.setup(opt)
     if opt.number == nil or opt.number == "random" then
         math.randomseed(os.time())
         local pokemon_dir = script_dir() .. "metadata/"
-        local pokemon_files = vim.split(vim.fn.glob(pokemon_dir .. "*"), "\n")
-        pokemon_file = pokemon_files[math.random(#pokemon_files)]
+        local pokemon_files = {}
+        for value, _ in vim.fs.dir(pokemon_dir) do
+            pokemon_files[#pokemon_files + 1] = value
+        end
+        pokemon_file = pokemon_dir .. pokemon_files[math.random(#pokemon_files)]
     else
         local number = opt.number
         if #number == 4 then
