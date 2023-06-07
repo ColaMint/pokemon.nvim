@@ -24,7 +24,7 @@ end
 function M.setup(opt)
     local size = opt.size
     if size == nil or size == "auto" then
-        local win_height = vim.fn.winheight(0)
+        local win_height = vim.api.nvim_win_get_height(0)
         if win_height >= 60 then
             size = "large"
         elseif win_height >= 40 then
@@ -50,7 +50,7 @@ function M.setup(opt)
     end
 
     local content = read_all(pokemon_file)
-    M.pokemon = vim.fn.json_decode(content)
+    M.pokemon = vim.json.decode(content)
 
     vim.api.nvim_create_user_command("PokemonTogglePokedex", M.toggle_pokedex, {})
 end
@@ -70,7 +70,7 @@ function M.toggle_pokedex(opt)
     else
         local pokedex_path = script_dir() .. "metadata/pokedex.json"
         local content = read_all(pokedex_path)
-        local pokedex = vim.fn.json_decode(content)
+        local pokedex = vim.json.decode(content)
 
         -- add pokemon to pokedex
         local text_art = M.pokemon.colored_text_art.small
